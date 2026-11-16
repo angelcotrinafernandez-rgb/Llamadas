@@ -1543,7 +1543,7 @@ function showP(){
   document.getElementById('pA').classList.add('active');
   rT();renderCal();renderDash();rPac();rDoc();rServ();rBloq();rOrd();rMant();rPres();
 }
-if(sessionStorage.getItem('auth')==='1'){document.getElementById('lS').style.display='none'}
+window.addEventListener('load',()=>{if(sessionStorage.getItem('auth')==='1')showP()})
 
 /* ==================== CALENDARIO ==================== */
 let calMes=new Date().getMonth(),calYear=new Date().getFullYear();
